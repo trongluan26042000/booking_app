@@ -1,5 +1,6 @@
 import 'package:booking_app/utils/app_info_list.dart';
 import 'package:booking_app/utils/app_styles.dart';
+import 'package:booking_app/widgets/double_text_widget.dart';
 import 'package:booking_app/widgets/hotels_screen.dart';
 import 'package:booking_app/widgets/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -71,17 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Chuyến bay tiếp theo', style: Styles.headLineStyle2,),
-                    InkWell(
-                      onTap: (){
-                        print("Đã nhấn");
-                      },
-                        child: Text('Tất cả',style: Styles.textStyle.copyWith(color: Styles.primaryColor),)),
-                  ],
-                ),
+               const AppDoubleTextWidget(bigText: 'Chuyến bay tiếp theo', smallText: 'Tất cả'),
               ],
             ),
           ),
@@ -96,17 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const Gap(15),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Khách sạn', style: Styles.headLineStyle2,),
-                InkWell(
-                    onTap: (){
-                      print("Đã nhấn");
-                    },
-                    child: Text('Tất cả',style: Styles.textStyle.copyWith(color: Styles.primaryColor),)),
-              ],
-            ),
+            child: const AppDoubleTextWidget(bigText: 'Khách sạn', smallText: 'Tất cả'),
           ),
           const Gap(15),
           SingleChildScrollView(
