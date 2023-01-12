@@ -1,5 +1,7 @@
 import 'package:booking_app/views/home_screen.dart';
+import 'package:booking_app/views/profile_screen.dart';
 import 'package:booking_app/views/search_screen.dart';
+import 'package:booking_app/views/ticket_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 class BottomBar extends StatefulWidget {
@@ -14,8 +16,8 @@ class _BottomBarState extends State<BottomBar> {
   static final List<Widget>_widgetOptions =<Widget>[
     const HomeScreen(),
     const SearchScreen(),
-    const Text('Ticket'),
-    const Text('Profile'),
+    const TicketScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index){
